@@ -1,0 +1,18 @@
+1. Отсутсвие проверки с None в каждом методе класса StringUtils
+Серьезность: Major 
+Приоритет: Высокий
+Шаги: 
+1. Создать файл (Test.py)
+2. В созданном файле (шаг 1) создать экземпляр класса StringUtils
+from string_utils import StringUtils
+
+utils = StringUtils()
+utils.capitalize(None)
+3. Запустить скрипт
+
+Ожидаемый результат:
+Метод capitalize класса StringUtils корректно обрабатывает недопустимое значение и выводит ошибку
+TypeError: "Должно быть строковое значение"
+
+Фактический результат:
+AttributeError: 'NoneType' object has no attribute 'capitalize'
