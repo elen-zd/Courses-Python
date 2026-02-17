@@ -93,10 +93,10 @@ def test_shop(browser):
 
     wait_fox.until(
         EC.presence_of_element_located(
-            (By.CSS_SELECTOR, "div[data-test=total-label")
+            (By.CSS_SELECTOR, "div[data-test=total-label]")
         )
     )
     price_total = browser.find_element(
-        By.CSS_SELECTOR, "div[data-test=total-label").text
+        By.CSS_SELECTOR, "div[data-test=total-label]").text
     assert price_total == "Total: $58.29"
     print(price_total)
